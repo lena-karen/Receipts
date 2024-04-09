@@ -1,32 +1,31 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import {CustomButton, CustomSwitch} from '@/components';
+import {SafeAreaView, StyleSheet, useColorScheme} from 'react-native';
+
+import {NavigationContainer} from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
+
+import {colors, dark, light} from './constants';
+import {RootNavigation} from './screens/navigation/RootNavigation';
 
 export const App = () => {
+  const isDarkMode = useColorScheme() === 'dark';
+
   return (
-    <View style={styles.flexContainer}>
-      <CustomSwitch
-        firstComponent={() => (
-          <View style={styles.flexContainer}>
-            <CustomButton onPress={() => {}} buttonTitle="Hi" />
-          </View>
-        )}
-        firstTitle="Hi"
-        secondComponent={() => (
-          <View style={styles.flexContainer}>
-            <CustomButton onPress={() => {}} buttonTitle="Ok" />
-          </View>
-        )}
-        secondTitle="Ok"
-      />
-    </View>
+    <LinearGradient
+      colors={[colors._D3841C, colors._FFFFFF]}
+      style={styles.container}>
+      <SafeAreaView style={styles.container}>
+        <NavigationContainer theme={isDarkMode ? dark : light}>
+          <RootNavigation />
+        </NavigationContainer>
+      </SafeAreaView>
+    </LinearGradient>
   );
 };
+
 const styles = StyleSheet.create({
-  flexContainer: {
+  container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 export default App;
