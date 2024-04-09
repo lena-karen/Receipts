@@ -2,6 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   text: {
-    fontSize: 18, borderWidth: 1
+    fontSize: 18,
   },
 });
