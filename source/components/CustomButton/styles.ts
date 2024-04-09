@@ -1,5 +1,6 @@
-import {colors} from '@/constants';
-import {StyleSheet, ViewStyle} from 'react-native';
+import { StyleSheet, ViewStyle } from 'react-native';
+
+import { colors } from '@/constants';
 
 export type ButtonThemes = {
   primary: ViewStyle;

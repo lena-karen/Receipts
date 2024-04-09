@@ -1,9 +1,15 @@
-import { ActivityIndicator, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native';
 import React, { FC } from 'react';
-import { ButtonThemes, getButtonThemes, styles } from './styles';
-import { AppText } from '../AppText/AppText';
-import { ButtonTheme, colors } from '@/constants';
+import { ActivityIndicator, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native';
+
 import LinearGradient from 'react-native-linear-gradient';
+
+import { AppText } from '../AppText/AppText';
+
+import { ButtonThemes, getButtonThemes, styles } from './styles';
+
+
+import { ButtonTheme, colors } from '@/constants';
+
 
 type customButtonProps = {
   buttonTitle?: string;
